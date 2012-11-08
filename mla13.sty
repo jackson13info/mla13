@@ -77,9 +77,11 @@
 \usepackage{datetime}
 \usepackage{fancyhdr}
 \linespread{2}
+\def\@firstname{ }
 \newcommand{\firstname}[1]{
   \def\@firstname{#1}
 }
+\def\@lastname{ }
 \newcommand{\lastname}[1]{
   \def\@lastname{#1}
 }
@@ -94,8 +96,8 @@
 \setlength{\parindent}{0.5in}
 \fancyhf{}
 \fancyhead{}
-\rhead{\@lastname\ \thepage}
 \renewcommand{\headrulewidth}{0pt}
+\rhead{\@lastname\ \thepage}
 \newdateformat{datef}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 \newcommand*{\makeheader}{\begingroup
 \rmfamily
