@@ -1,0 +1,42 @@
+texmf=$(kpsewhich -var-value=TEXMFHOME)
+#Saves the texmf tree location to a local variable
+if [ -d "$texmf" ]; then #Checks to see if the texmf tree exists
+	echo "The local texmf tree detected. Process continuing..." #The texmf tree exists
+else
+	echo "Your file system does not contain a texmf tree"
+	echo "Would you like me to create one for you? [y-yes/n-no]"
+	read -s -n1 create
+	if [ "$create" == "y" ] || [ "$create" == "Y" ]; then
+		mkdir -p ~/Library/texmf/bibtex/bib
+		mkdir -p ~/Library/texmf/bibtex/bst
+		mkdir -p ~/Library/texmf/doc
+		mkdir -p ~/Library/texmf/fonts/afm
+		mkdir -p ~/Library/texmf/fonts/map
+		mkdir -p ~/Library/texmf/fonts/misc
+		mkdir -p ~/Library/texmf/fonts/pk
+		mkdir -p ~/Library/texmf/fonts/source
+		mkdir -p ~/Library/texmf/fonts/tfm
+		mkdir -p ~/Library/texmf/fonts/type1
+		mkdir -p ~/Library/texmf/generic
+		mkdir -p ~/Library/texmf/scripts
+		mkdir -p ~/Library/texmf/source
+		mkdir -p ~/Library/texmf/tex/context
+		mkdir -p ~/Library/texmf/tex/generic
+		mkdir -p ~/Library/texmf/tex/latex
+		mkdir -p ~/Library/texmf/tex/plain
+		mkdir -p ~/Library/texmf/tex/xelatex
+		mkdir -p ~/Library/texmf/tex/xetex	
+		echo "Local TeXmf tree created. Process continuing..."
+	fi
+fi
+if [ -d "$texmf" ]; then
+	echo "Downloading MLA13 package file..."
+	curl -o "$texmf/tex/mla13.sty" http://www.jackson13.info/mla13/mla13.sty
+	echo "Download Complete"
+	echo "Setting up package..."
+	echo "Package Setup"
+	echo "Downloading Documentation..."
+	curl -o "$texmf/doc/mla13_documentation.pdf" http://www.jackson13.info/mla13/Documentation.pdf
+	echo "Documentation Download Complete"
+	echo "MLA13 Package Successfully Installed"
+fi
