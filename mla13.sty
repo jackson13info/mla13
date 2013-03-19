@@ -5,7 +5,8 @@
 %\usepackage{biblatex}
 \usepackage[american]{babel}
 \usepackage{csquotes}
-\usepackage[style=mla,mladraft=true]{biblatex}
+\usepackage{setspace}
+\usepackage[style=mla,mladraft=true,annotation=true]{biblatex}
 \usepackage{color}
 \newcommand{\sources}[1]{
   \def\@sources{#1}
@@ -59,6 +60,22 @@
    \usebibmacro{cite:mla}}{}
   {\usebibmacro{postnote}}
 \defbibheading{apa}[\refname]{}
+
+%Annotations for the Bibliography
+\renewbibmacro{finentry}{%Renew the annotation macro
+   \finentry
+   \iffieldundef{annotation}%
+     {}%
+     {\ifbool{bbx@annotation}%
+       {\begin{quotation}\noindent%Make the annotation look like a quotation and remove the indent
+          \printfield{annotation}%
+        \end{quotation}}%
+       {}}%
+}
+
+%End Annotation Section
+
+
 %End Bibliography Commands
 %remove parenthesis from bibliography
 \renewbibmacro*{issue+date}{%
