@@ -31,7 +31,7 @@ else
 fi
 if [ -d "$texmf" ]; then
 	echo "Downloading MLA13 package file..."
-	curl -o "$texmf/tex/mla13.sty" https://raw.github.com/jackson13info/mla13/master/install_mla13
+	curl -o "$texmf/tex/mla13.sty" https://raw.github.com/jackson13info/mla13/master/mla13.sty
 	echo "Download Complete"
 	echo "Setting up package..."
 	echo "Package Setup"
