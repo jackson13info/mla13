@@ -7,7 +7,7 @@ A LaTeX MLA style formatter package that allows users to create MLA style docume
 
 ## Automatically ##
 
-This package comes with an installation script built for macs only. [install_mla13][https://raw.github.com/jackson13info/mla13/master/install_mla13] which can be found on github, checks your computer for a local texmf tree. If you already have one it will download and install the file along with the pdf version of its documentation. If your computer doesn't have one, it will create one for you and preceed with the downloading/installation process.
+This package comes with an installation script built for macs only. [install_mla13](https://raw.github.com/jackson13info/mla13/master/install_mla13) which can be found on github, checks your computer for a local texmf tree. If you already have one it will download and install the file along with the pdf version of its documentation. If your computer doesn't have one, it will create one for you and preceed with the downloading/installation process.
 
 ## Manually ##
 
@@ -17,8 +17,9 @@ If you want to install the package manually (because you want to or you have not
 
 The mla13 package does not require that you use any other packages, though it allows you to do so. The
 packages that are utilized by mla13 are: geometry, babel, csquotes, biblatex, and color. In order to use the
-features provided by mla13, the rst thing you have to do is to use the package in your LATEXproject. To do
+features provided by mla13, the first thing you have to do is to use the package in your LaTeX project. To do
 this use the following command:
+    
     \usepackage{mla13.sty}
 
 ## Creating Your Header ##
@@ -56,7 +57,8 @@ should be kept in a .bib file and should be formatted to meet the BibTeX standar
 BibTeX and its features, look at this website http://en.wikipedia.org/wiki/BibTeX. Once your file is
 set up you need to tell mla13 which file to look at. To do this type the following before the begin document
 section of your LaTeX project:
-   \sources{NameOfBibFile.bib}
+   
+    \sources{NameOfBibFile.bib}
 
 To cite a source, the main command that you should use is the standard cite command. This is the one
 that fits with MLA citation style. Here is an example of how to use this command:
@@ -72,6 +74,7 @@ before begindocument:
 
     \date{5 February 2013}
 This follows the format of MLA such that:
+
     \date{DAY MONTH YEAR}
 Otherwise, to use the current date, do not include the date field inside of your file.
 
