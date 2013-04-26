@@ -27,6 +27,7 @@ All MLA documents must contain the standard 5 line header that includes your nam
 name, and the date the paper was written on. To do this, no formatting work is needed, the package just
 needs the values to be set and it will do all of the heavy lifting. To set the values of the variables follow the
 process below:
+
     \firstname{Your First Name}
     \lastname{Your Last Name}
     \professor{Your Professor's Name}
