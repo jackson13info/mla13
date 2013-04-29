@@ -13,6 +13,32 @@
   \def\@sources{#1}
   \bibliography{#1}
 }
+
+%Formatting Commands
+\renewcommand \thesection {\@arabic\c@section.}
+\renewcommand\thesubsection   {\thesection\@arabic\c@subsection}
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+                                    {\z@}%
+                                    {\lineskip}%
+                                    {\normalfont}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                       {\z@}%
+                                       {\lineskip}%
+                                       {\normalfont}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                          {\z@}%
+                                          {\lineskip}%
+                                          {\normalfont}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                                      {\z@}%
+                                      {\lineskip}%
+                                      {\normalfont}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+                                         {\z@}%
+                                         {\lineskip}%
+                                         {\normalfont}}
+
+
 %Bibliography Commands
 \DeclareFieldFormat{ibidpostnote}{#1}%
 \newbibmacro*{cite:idem}{%
