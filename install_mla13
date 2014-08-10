@@ -7,25 +7,25 @@ else
 	echo "Would you like me to create one for you? [y-yes/n-no]"
 	read -s -n1 create
 	if [ "$create" == "y" ] || [ "$create" == "Y" ]; then
-		mkdir -p ~/Library/texmf/bibtex/bib
-		mkdir -p ~/Library/texmf/bibtex/bst
-		mkdir -p ~/Library/texmf/doc
-		mkdir -p ~/Library/texmf/fonts/afm
-		mkdir -p ~/Library/texmf/fonts/map
-		mkdir -p ~/Library/texmf/fonts/misc
-		mkdir -p ~/Library/texmf/fonts/pk
-		mkdir -p ~/Library/texmf/fonts/source
-		mkdir -p ~/Library/texmf/fonts/tfm
-		mkdir -p ~/Library/texmf/fonts/type1
-		mkdir -p ~/Library/texmf/generic
-		mkdir -p ~/Library/texmf/scripts
-		mkdir -p ~/Library/texmf/source
-		mkdir -p ~/Library/texmf/tex/context
-		mkdir -p ~/Library/texmf/tex/generic
-		mkdir -p ~/Library/texmf/tex/latex
-		mkdir -p ~/Library/texmf/tex/plain
-		mkdir -p ~/Library/texmf/tex/xelatex
-		mkdir -p ~/Library/texmf/tex/xetex	
+		mkdir -p "$texmf/bibtex/bib"
+		mkdir -p "$texmf/bibtex/bst"
+		mkdir -p "$texmf/doc"
+		mkdir -p "$texmf/fonts/afm"
+		mkdir -p "$texmf/fonts/map"
+		mkdir -p "$texmf/fonts/misc"
+		mkdir -p "$texmf/fonts/pk"
+		mkdir -p "$texmf/fonts/source"
+		mkdir -p "$texmf/fonts/tfm"
+		mkdir -p "$texmf/fonts/type1"
+		mkdir -p "$texmf/generic"
+		mkdir -p "$texmf/scripts"
+		mkdir -p "$texmf/source"
+		mkdir -p "$texmf/tex/context"
+		mkdir -p "$texmf/tex/generic"
+		mkdir -p "$texmf/tex/latex"
+		mkdir -p "$texmf/tex/plain"
+		mkdir -p "$texmf/tex/xelatex"
+		mkdir -p "$texmf/tex/xetex"
 		echo "Local TeXmf tree created. Process continuing..."
 	fi
 fi
