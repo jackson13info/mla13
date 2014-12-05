@@ -14,6 +14,9 @@
   \bibliography{#1}
 }
 
+%removes the space added to the center enviornment
+\newenvironment{nospacecenter}{\parskip=0pt\par\nopagebreak\centering}{\par\noindent\ignorespacesafterend}
+
 %Formatting Commands
 \renewcommand \thesection {\@arabic\c@section.}
 \renewcommand\thesubsection   {\thesection\@arabic\c@subsection}
@@ -153,9 +156,9 @@
 \@professor\\
 \@class\\
 \datef\@date
-\begin{center}
+\begin{nospacecenter}
 \@title
-\end{center}
+\end{nospacecenter}
 \endgroup}
 \newcommand*{\makeworkscited}{\begingroup
 \pagebreak
