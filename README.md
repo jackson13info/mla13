@@ -66,6 +66,8 @@ that fits with MLA citation style. Here is an example of how to use this command
 No Page Number: `\cite{Name of Source}`
 Page Number: `\cite[Page]{Name of Source}`
 
+Finally, add `\makeworkscited` at the end of your document (but before `\end{document}`) in order to include your works cited.
+
 ## Changing the Date of the File ##
 
 If you want to use a date other than the current date, the only way is to manually input the correctly
